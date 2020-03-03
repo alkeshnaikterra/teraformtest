@@ -1,5 +1,6 @@
 
 locals {
+  features {}
   prefix-hub         = "hub"
 }
 
