@@ -31,23 +31,3 @@ variable "location" {
 variable "resource_group_name" {
   description = "Resource group name that will contain various resources"
 }
-
-variable "vnet_cidr" {
-  description = "CIDR block for Virtual Network"
-}
-
-variable "subnet1_cidr" {
-  description = "CIDR block for Subnet within a Virtual Network"
-}
-
-variable "subnet2_cidr" {
-  description = "CIDR block for Subnet within a Virtual Network"
-}
-
-variable "vm_username" {
-  description = "Enter admin username to SSH into Linux VM"
-}
-
-variable "vm_password" {
-  description = "Enter admin password to SSH into VM"
-}
