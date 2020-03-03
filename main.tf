@@ -1,6 +1,5 @@
 
 locals {
-  features {}
   prefix-hub         = "hub"
 }
 
@@ -11,6 +10,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_virtual_network" "hub-vnet" {
+    provider = "azurerm.core"
   name                = "${local.prefix-hub}-vnet"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
@@ -22,6 +22,7 @@ resource "azurerm_virtual_network" "hub-vnet" {
 }
 
 resource "azurerm_subnet" "hub-gateway-subnet" {
+    provider = "azurerm.core"
   name                 = "GatewaySubnet"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.hub-vnet.name
