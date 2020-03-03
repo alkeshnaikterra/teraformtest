@@ -16,9 +16,6 @@ resource "azurerm_virtual_network" "hub-vnet" {
   resource_group_name = azurerm_resource_group.rg.name
   address_space       = ["10.0.0.0/16"]
 
-  tags {
-    environment = "hub-spoke"
-  }
 }
 
 resource "azurerm_subnet" "hub-gateway-subnet" {
